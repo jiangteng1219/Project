@@ -1,0 +1,15 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: gd-user-consumer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka    #内部通讯连接地址
+feign:
+  hystrix:
+    enabled: true    #开启断路器机制
+logging:
+  level:
+    root: INFO
